@@ -1,0 +1,126 @@
+{
+	"id": "kn02bu9v",
+	"modele": "TEST",
+	"enoCoreVersion": "2.3.7-dev-lunatic-v2",
+	"lunaticModelVersion": "2.2.13-dev-lunatic-v2",
+	"generatingDate": "08-08-2022 15:39:50",
+	"missing": false,
+	"pagination": "question",
+	"maxPage": "4",
+	"label": { "value": "Questionnaire test", "type": "VTL|MD" },
+	"components": [
+		{
+			"id": "kn02cpfw",
+			"componentType": "Sequence",
+			"page": "1",
+			"label": { "value": "\"I - \" || \"Séquence 1\"", "type": "VTL|MD" },
+			"conditionFilter": { "value": "true", "type": "VTL" },
+			"hierarchy": {
+				"sequence": {
+					"id": "kn02cpfw",
+					"page": "1",
+					"label": { "value": "\"I - \" || \"Séquence 1\"", "type": "VTL|MD" }
+				}
+			}
+		},
+
+		{
+			"id": "kn02lik4",
+			"componentType": "Duration",
+			"mandatory": false,
+			"page": "2",
+			"min": "PT0H0M",
+			"max": "PT99H59M",
+			"format": "PTnHnM",
+			"label": {
+				"value": "\"➡ 1. \" || \"Combien de temps comptez-vous sortir en hh:mm ?\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": { "value": "true", "type": "VTL" },
+			"hierarchy": {
+				"sequence": {
+					"id": "kn02cpfw",
+					"page": "1",
+					"label": { "value": "\"I - \" || \"Séquence 1\"", "type": "VTL|MD" }
+				}
+			},
+			"bindingDependencies": ["COMBIENDET"],
+			"response": { "name": "COMBIENDET" }
+		},
+
+		{
+			"id": "COMMENT-SEQ",
+			"componentType": "Sequence",
+			"page": "3",
+			"label": {
+				"value": "\"Identification de votre \" || cast(COMBIENDET,string)",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": { "value": "true", "type": "VTL" },
+			"hierarchy": {
+				"sequence": {
+					"id": "COMMENT-SEQ",
+					"page": "3",
+					"label": { "value": "\"Commentaire\"", "type": "VTL|MD" }
+				}
+			},
+			"bindingDependencies": ["COMBIENDET"]
+		},
+
+		{
+			"id": "COMMENT-QUESTION",
+			"componentType": "Textarea",
+			"mandatory": false,
+			"page": "4",
+			"maxLength": 2000,
+			"label": {
+				"value": "\"Avez-vous des remarques concernant l'enquête ou des commentaires ?\"",
+				"type": "VTL|MD"
+			},
+			"conditionFilter": { "value": "true", "type": "VTL" },
+			"hierarchy": {
+				"sequence": {
+					"id": "COMMENT-SEQ",
+					"page": "3",
+					"label": { "value": "\"Commentaire\"", "type": "VTL|MD" }
+				}
+			},
+			"bindingDependencies": ["COMMENT_QE"],
+			"response": { "name": "COMMENT_QE" }
+		}
+	],
+	"variables": [
+		{
+			"variableType": "COLLECTED",
+			"name": "COMMENT_QE",
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+
+		{
+			"variableType": "COLLECTED",
+			"name": "COMBIENDET",
+			"values": {
+				"PREVIOUS": null,
+				"COLLECTED": null,
+				"FORCED": null,
+				"EDITED": null,
+				"INPUTED": null
+			}
+		},
+
+		{
+			"variableType": "CALCULATED",
+			"name": "FILTER_RESULT_COMBIENDET",
+			"expression": { "value": "true", "type": "VTL" },
+			"inFilter": "false"
+		}
+	],
+	"cleaning": {},
+	"resizing": {}
+}
