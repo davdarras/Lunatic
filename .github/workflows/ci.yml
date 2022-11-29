@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: 16
       - uses: bahmutov/npm-install@v1
+      - run: yarn version
       - run: yarn
       # Run tests & build sonar reports
       - run: yarn test-coverage
