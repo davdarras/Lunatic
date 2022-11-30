@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
 import classnames from 'classnames';
-import { CheckboxChecked, CheckboxUnchecked } from '../../commons/icons';
 import './checkbox-option.scss';
 import { createCustomizableLunaticField } from '../../commons';
 
@@ -30,30 +29,20 @@ function CheckboxOption({
 		[onClickOption]
 	);
 
-	const Icon = checked ? CheckboxChecked : CheckboxUnchecked;
-
 	return (
-		<div
-			className={classnames('checkbox-modality', 'checkbox-modality-block', {
-				checked,
-				disabled,
-			})}
-		>
-			<span
+		<div className="lunatic-checkbox-group">
+			<input
+				type="checkbox"
 				id={id}
-				role="checkbox"
-				className={`lunatic-input-checkbox`}
+				name="checkbox"
+				disabled={disabled}
+				//className="lunatic-input-checkbox"
 				aria-checked={checked}
-				tabIndex="0"
+				aria-labelledby={labelledBy}
 				onClick={onClickOption}
 				onKeyDown={handleKeyDown}
-				aria-labelledby={labelledBy}
-			>
-				<Icon />
-				<span id={labelledBy} htmlFor={id}>
-					{label}
-				</span>
-			</span>
+			/>
+			<label for={id}>{label}</label>
 		</div>
 	);
 }

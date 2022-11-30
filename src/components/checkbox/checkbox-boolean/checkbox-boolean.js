@@ -11,7 +11,6 @@ function CheckboxBoolean({ checked, id, disabled, onClick, labelId, label }) {
 			onClick={onClick}
 			labelledBy={labelId}
 			value={checked}
-			label={label}
 		/>
 	);
 }
