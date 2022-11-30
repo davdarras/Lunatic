@@ -1,0 +1,151 @@
+{
+	"cleaning": {},
+	"variables": [
+		{
+			"variableType": "COLLECTED",
+			"values": {
+				"COLLECTED": null,
+				"EDITED": null,
+				"INPUTED": null,
+				"FORCED": null,
+				"PREVIOUS": null
+			},
+			"name": "COMMENT_QE"
+		},
+		{
+			"variableType": "COLLECTED",
+			"values": {
+				"COLLECTED": null,
+				"EDITED": null,
+				"INPUTED": null,
+				"FORCED": null,
+				"PREVIOUS": null
+			},
+			"name": "CHECKBOXGR1"
+		},
+		{
+			"variableType": "COLLECTED",
+			"values": {
+				"COLLECTED": null,
+				"EDITED": null,
+				"INPUTED": null,
+				"FORCED": null,
+				"PREVIOUS": null
+			},
+			"name": "CHECKBOXGR2"
+		},
+		{
+			"variableType": "COLLECTED",
+			"values": {
+				"COLLECTED": null,
+				"EDITED": null,
+				"INPUTED": null,
+				"FORCED": null,
+				"PREVIOUS": null
+			},
+			"name": "CHECKBOXGR3"
+		},
+		{
+			"variableType": "COLLECTED",
+			"values": {
+				"COLLECTED": null,
+				"EDITED": null,
+				"INPUTED": null,
+				"FORCED": null,
+				"PREVIOUS": null
+			},
+			"name": "CHECKBOXGR4"
+		},
+		{
+			"variableType": "COLLECTED",
+			"values": {
+				"COLLECTED": null,
+				"EDITED": null,
+				"INPUTED": null,
+				"FORCED": null,
+				"PREVIOUS": null
+			},
+			"name": "CHECKBOXGR5"
+		},
+		{
+			"variableType": "CALCULATED",
+			"expression": { "type": "VTL", "value": "true" },
+			"name": "FILTER_RESULT_CHECKBOXG",
+			"inFilter": "false"
+		}
+	],
+	"components": [
+		{
+			"componentType": "CheckboxGroup",
+			"bindingDependencies": [
+				"CHECKBOXGR1",
+				"CHECKBOXGR2",
+				"CHECKBOXGR3",
+				"CHECKBOXGR4",
+				"CHECKBOXGR5"
+			],
+			"hierarchy": {
+				"sequence": {
+					"id": "lb3p5dme",
+					"page": "1",
+					"label": { "type": "VTL|MD", "value": "\"I - \" || \"Séquence 1\"" }
+				}
+			},
+			"responses": [
+				{
+					"response": { "name": "CHECKBOXGR1" },
+					"id": "lb3p1r9l-QOP-lb3p2qgm",
+					"label": { "type": "VTL|MD", "value": "\"Choix 1\"" }
+				},
+				{
+					"response": { "name": "CHECKBOXGR2" },
+					"id": "lb3p1r9l-QOP-lb3pghro",
+					"label": { "type": "VTL|MD", "value": "\"Choix 2\"" }
+				},
+				{
+					"response": { "name": "CHECKBOXGR3" },
+					"id": "lb3p1r9l-QOP-lb3pgg7o",
+					"label": { "type": "VTL|MD", "value": "\"Choix 3\"" }
+				},
+				{
+					"response": { "name": "CHECKBOXGR4" },
+					"id": "lb3p1r9l-QOP-lb3p2mel",
+					"label": { "type": "VTL|MD", "value": "\"Choix 4\"" }
+				},
+				{
+					"response": { "name": "CHECKBOXGR5" },
+					"id": "lb3p1r9l-QOP-lb3pcqmt",
+					"label": { "type": "VTL|MD", "value": "\"Choix 5\"" }
+				}
+			],
+			"conditionFilter": { "type": "VTL", "value": "true" },
+			"id": "lb3p1r9l",
+			"page": "1",
+			"label": {
+				"type": "VTL|MD",
+				"value": "\"➡ 1. \" || \"Checkbox Group avec 5 modalités\""
+			},
+			"declarations": [
+				{
+					"declarationType": "HELP",
+					"id": "lb3p1r9l-lb3pihqi",
+					"label": {
+						"type": "VTL|MD",
+						"value": "\"libéllé de la déclaration\""
+					},
+					"position": "AFTER_QUESTION_TEXT"
+				}
+			]
+		}
+	],
+	"pagination": "question",
+	"resizing": {},
+	"label": { "type": "VTL|MD", "value": "CheckboxGroupe" },
+	"lunaticModelVersion": "2.3.1",
+	"modele": "CHECKBOXGR",
+	"enoCoreVersion": "2.4.0",
+	"generatingDate": "30-11-2022 13:36:22",
+	"missing": false,
+	"id": "lb3pdpzy",
+	"maxPage": "1"
+}
