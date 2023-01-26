@@ -81,5 +81,5 @@ jobs:
           yarn publish --tag beta --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}-beta
+          VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
 
